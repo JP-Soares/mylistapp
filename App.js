@@ -3,6 +3,10 @@ import { useEffect } from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import { initDatabase } from './src/database/migrations/init';
 
+import Home from './src/screens/Home'
+
+import "./global.css"
+
 export default function App() {
 
   useEffect(() => {
@@ -10,18 +14,6 @@ export default function App() {
   }, []);
 
   return (
-    <View style={styles.container}>
-      <Text>teste</Text>
-      <StatusBar style="auto" />
-    </View>
+    <Home></Home>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
