@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "dependencies": {
+    "@expo/vector-icons": "^15.0.2",
     "babel-preset-expo": "^57.0.1",
     "expo": "~56.0.12",
     "expo-sqlite": "~56.0.5",
