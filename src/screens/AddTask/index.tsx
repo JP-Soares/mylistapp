@@ -1,5 +1,10 @@
+import { View } from "react-native";
+import { Text } from "react-native";
+
 export default function AddTask(){
     return(
-        <h1>Add Task screen</h1>
+        <View>
+            <Text>Add task</Text>
+        </View>
     );
 }

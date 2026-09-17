@@ -1,9 +1,14 @@
-import {createStaticNavigation} from '@react-navigation/native';
-import {createNativeStackNavigator} from '@react-navigation/native-stack'
-import Home from '../screens/Home';
-import AddTask from '../screens/AddTask';
+import { createStaticNavigation } from "@react-navigation/native";
+import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 
-const RootStack = createNativeStackNavigator({
+import Home from "../screens/Home";
+import AddTask from "../screens/AddTask";
+import Menu from "../components/menu/Menu";
+import Calendar from "../screens/Calendar";
+
+const RootTabs = createBottomTabNavigator({
+  tabBar: (props) => <Menu {...props} />,
+
   screens: {
     Home: {
       screen: Home,
@@ -11,8 +16,16 @@ const RootStack = createNativeStackNavigator({
         headerShown: false,
       },
     },
-    Addtask: {
+
+    AddTask: {
       screen: AddTask,
+      options: {
+        headerShown: false,
+      },
+    },
+
+    Calendar: {
+      screen: Calendar,
       options: {
         headerShown: false,
       },
@@ -20,4 +33,4 @@ const RootStack = createNativeStackNavigator({
   },
 });
 
-export const Navigation = createStaticNavigation(RootStack);
+export const Navigation = createStaticNavigation(RootTabs);
