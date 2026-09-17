@@ -5,6 +5,7 @@ import { initDatabase } from './src/database/migrations/init';
 
 import Home from './src/screens/Home'
 import Menu from './src/components/menu/Menu';
+import { Navigation } from './src/navigation/Navigation';
 
 import "./global.css"
 
@@ -16,8 +17,8 @@ export default function App() {
 
   return (
     <>
+      <Navigation></Navigation>
       <Menu></Menu>
-      <Home></Home>
     </>
   );
 }

@@ -1,15 +1,22 @@
 import { View, Text } from "react-native";
 import TopBar from "../../components/topBar/TopBar";
+import ListCard from "./components/ListCard";
 
 export default function Home() {
   return (
-    <View className="flex-1 justify-center items-center">
-      <TopBar title="Home"></TopBar>
-      <Text className="text-xl font-bold">
-        <View className="">
+    <View className="flex-1">
+      <TopBar title="Home" />
 
+      <View className="flex-1 items-center justify-center">
+        <View className="w-full flex-row flex-wrap justify-center gap-3">
+          <ListCard />
+          <ListCard />
+          <ListCard />
+          <ListCard />
+          <ListCard />
+          <ListCard />
         </View>
-      </Text>
+      </View>
     </View>
   );
 }
